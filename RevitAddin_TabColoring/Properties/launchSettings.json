@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "RevitAddin_TabColoring": {
+      "commandName": "Project"
+    },
+    "TabColoringExe": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Autodesk\\Revit 2025\\Revit.exe"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+﻿<Window x:Class="RevitAddin_TabColoring.SettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RevitAddin_TabColoring"
+        mc:Ignorable="d"
+        Title="SettingWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Projekte" FontSize="14" FontWeight="Bold" Grid.Row="0"/>
+        <ComboBox x:Name="ProjectComboBox" Grid.Row="1" Margin="0,5,0,10" SelectionChanged="ProjectComboBox_SelectionChanged">
+            <ComboBoxItem Content="Ausgefüllt" />
+            <ComboBoxItem Content="Umrandet - dünn" />
+            <ComboBoxItem Content="Umrandet - mittel" />
+            <ComboBoxItem Content="Umrandet - dick" />
+            <ComboBoxItem Content="oberer Balken - dünn" />
+            <ComboBoxItem Content="oberer Balken - mittel" />
+            <ComboBoxItem Content="oberer Balken - dick" />
+        </ComboBox>
+
+        <TextBlock Text="Familien" FontSize="14" FontWeight="Bold" Grid.Row="2"/>
+        <ComboBox x:Name="FamilyComboBox" Grid.Row="3" Margin="0,5,0,10" SelectionChanged="FamilyComboBox_SelectionChanged">
+            <ComboBoxItem Content="Ausgefüllt" />
+            <ComboBoxItem Content="Umrandet - dünn" />
+            <ComboBoxItem Content="Umrandet - mittel" />
+            <ComboBoxItem Content="Umrandet - dick" />
+            <ComboBoxItem Content="oberer Balken - dünn" />
+            <ComboBoxItem Content="oberer Balken - mittel" />
+            <ComboBoxItem Content="oberer Balken - dick" />
+        </ComboBox>
+    </Grid>
+</Window>

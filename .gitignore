@@ -1,0 +1,22 @@
+# Binärdateien und Build-Ordner
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Visual Studio spezifische Dateien und Ordner
+.vs/
+*.suo
+*.user
+*.cache
+*.db
+
+# NuGet-Pakete
+packages/
+*.nupkg
+
+# Revit-spezifische Ausschlüsse
+*.addin
+*.rvt
+*.rfa

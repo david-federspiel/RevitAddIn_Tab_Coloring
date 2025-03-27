@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Text="Projekte" FontSize="14" FontWeight="Bold" Grid.Row="0"/>
-        <ComboBox x:Name="ProjectComboBox" Grid.Row="1" Margin="0,5,0,10" SelectionChanged="ProjectComboBox_SelectionChanged">
+        <ComboBox x:Name="ProjectComboBox" Grid.Row="1" Margin="0,5,0,10" Loaded="ProjectComboBox_Loaded" SelectionChanged="ProjectComboBox_SelectionChanged">
             <ComboBoxItem Content="Ausgefüllt" />
             <ComboBoxItem Content="Umrandet - dünn" />
             <ComboBoxItem Content="Umrandet - mittel" />
@@ -27,7 +27,7 @@
         </ComboBox>
 
         <TextBlock Text="Familien" FontSize="14" FontWeight="Bold" Grid.Row="2"/>
-        <ComboBox x:Name="FamilyComboBox" Grid.Row="3" Margin="0,5,0,10" SelectionChanged="FamilyComboBox_SelectionChanged">
+        <ComboBox x:Name="FamilyComboBox" Grid.Row="3" Margin="0,5,0,10" Loaded="FamilyComboBox_Loaded" SelectionChanged="FamilyComboBox_SelectionChanged">
             <ComboBoxItem Content="Ausgefüllt" />
             <ComboBoxItem Content="Umrandet - dünn" />
             <ComboBoxItem Content="Umrandet - mittel" />

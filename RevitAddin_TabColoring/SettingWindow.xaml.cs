@@ -13,7 +13,19 @@ namespace RevitAddin_TabColoring
             InitializeComponent();
         }
 
+        // event handler > combox  loaded
+        private void ProjectComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            // always display current selection
+            ProjectComboBox.SelectedItem = FindComboBoxItem(ProjectComboBox, projectSelection);
+        }
 
+        // event handler > combobox loaded
+        private void FamilyComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            // always display current selection
+            FamilyComboBox.SelectedItem = FindComboBoxItem(FamilyComboBox, familySelection);
+        }
         // Event-handler, if user changes Project-tab settings
         private void ProjectComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -34,6 +46,18 @@ namespace RevitAddin_TabColoring
                 App.TabUnColoring();
                 App.TabColoring(App.documentDictionary);
             }
+        }
+
+        private ComboBoxItem FindComboBoxItem(ComboBox comboBox, string value)
+        {
+            foreach (var item in comboBox.Items)
+            {
+                if (item is ComboBoxItem comboBoxItem && comboBoxItem.Content.ToString() == value)
+                {
+                    return comboBoxItem;
+                }
+            }
+            return null;
         }
     }
 }
